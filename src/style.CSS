@@ -1,4 +1,141 @@
+/*general page styling */
 body {
-  background-color: aqua;
   text-align: center;
+  margin: 0 auto;
+  font-family: "Courier New", Courier, monospace;
+  display: grid;
+}
+
+html {
+  background: linear-gradient(
+    68.2deg,
+    rgb(7, 3, 98) -0.1%,
+    rgb(179, 26, 132) 47.7%,
+    rgb(239, 186, 83) 100.2%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+h1 {
+  font-size: 30px;
+  margin-top: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* trivia styling */
+#submit-btn {
+  width: 200px;
+  margin: 20px auto 0;
+  padding: 10px;
+  border: 0;
+  border-radius: 4px;
+  display: block;
+  font-weight: 400;
+  cursor: pointer;
+  display: none;
+  transition: all 200ms ease-in-out;
+
+  background-color: #57385c;
+  color: #ec7263;
+}
+
+#submit-btn:hover {
+  background-color: #ec7263;
+  color: #57385c;
+}
+.btn {
+  padding: 7px;
+  background-color: rgb(254, 190, 126);
+  color: #57385c;
+  font-size: 16px;
+  border: 1px solid rgb(254, 190, 126);
+  border-radius: 4px;
+  margin: 10px 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn:hover:not([disabled]) {
+  background-color: rgb(48, 209, 85);
+  transition: all 200ms ease-in-out;
+  border: 1px solid rgb(48, 209, 85);
+}
+.btn:disabled {
+  cursor: no-drop;
+}
+.container {
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 6px;
+  padding: 15px;
+
+  display: flex;
+}
+
+.correct {
+  background-color: rgb(48, 209, 85);
+}
+
+.incorrect {
+  background-color: rgb(224, 0, 0);
+}
+
+/* timer styling*/
+.base-timer {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
 }

@@ -8,9 +8,19 @@
     <link rel="stylesheet" href="src/style.CSS" />
   </head>
   <body>
-    <h1>Are you ready to play?</h1>
+    <h1>Are you a smart cookie?</h1>
+    <div id="app"></div>
     <div class="container">
-      <h2>Let's go</h2>
+      <div id="quiz" class="quiz">
+        <h2 id="question">Question</h2>
+        <div id="answer-buttons">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+        <button id="submit-btn">Next</button>
+      </div>
     </div>
 
     <script src="src/index.js"></script>
